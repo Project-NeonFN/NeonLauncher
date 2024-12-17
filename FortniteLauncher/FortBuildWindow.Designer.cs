@@ -104,10 +104,11 @@
             this.PathBox.ForeColor = System.Drawing.Color.White;
             this.PathBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.PathBox.Location = new System.Drawing.Point(19, 172);
+            this.PathBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.PathBox.Name = "PathBox";
             this.PathBox.PasswordChar = '\0';
             this.PathBox.PlaceholderForeColor = System.Drawing.Color.White;
-            this.PathBox.PlaceholderText = "Enter Email";
+            this.PathBox.PlaceholderText = "Enter GamePath";
             this.PathBox.SelectedText = "";
             this.PathBox.Size = new System.Drawing.Size(702, 64);
             this.PathBox.TabIndex = 4;

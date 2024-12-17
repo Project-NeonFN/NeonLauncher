@@ -110,7 +110,7 @@ namespace FortniteLauncher
                 return;
             }
             // need to find a better start // credits to rift for this part
-            Process process = StartProcess(File.ReadAllText("FortniteAccount\\Path.txt") + "\\FortniteGame\\Binaries\\Win64\\FortniteLauncher.exe", true, "-NOSSLPINNING");
+            //Process process = StartProcess(File.ReadAllText("FortniteAccount\\Path.txt") + "\\FortniteGame\\Binaries\\Win64\\FortniteLauncher.exe", true, "-NOSSLPINNING");
             Process process2 = StartProcess(File.ReadAllText("FortniteAccount\\Path.txt") + "\\FortniteGame\\Binaries\\Win64\\FortniteClient-Win64-Shipping_BE.exe", true, "");
             Process process3 = StartProcess(File.ReadAllText("FortniteAccount\\Path.txt") + "\\FortniteGame\\Binaries\\Win64\\FortniteClient-Win64-Shipping.exe", false, $"-AUTH_TYPE=epic -AUTH_LOGIN={File.ReadAllText("FortniteAccount\\Email.txt")} -AUTH_PASSWORD={File.ReadAllText("FortniteAccount\\Password.txt")}");
             process3.WaitForInputIdle();
@@ -139,6 +139,14 @@ namespace FortniteLauncher
             downloadPanel1.Hide();
             StatsPanel.Show();
             DownloadPanel.Show();
+        }
+
+        private void AddBuildButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form2 = new FortBuildWindow();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
         }
     }
 }
